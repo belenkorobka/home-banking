@@ -1,0 +1,25 @@
+$blueColor: #4113D1;
+$darkBlueColor: #20154F;
+$lightGrayColor: #F2F2F2;
+$middleGrayColor: #CCCCCC;
+$darkGrayColor: #999999;
+
+@mixin manrope-light($font-size) {
+    font: 300 $font-size 'Manrope', sans-serif;
+}
+
+@mixin manrope-regular($font-size) {
+    font: 400 $font-size 'Manrope', sans-serif;
+}
+
+@mixin manrope-medium($font-size) {
+    font: 500 $font-size 'Manrope', sans-serif;
+}
+
+@mixin manrope-bold($font-size) {
+    font: 700 $font-size 'Manrope', sans-serif;
+}
+
+@mixin manrope-extraBold($font-size) {
+    font: 800 $font-size 'Manrope', sans-serif;
+}

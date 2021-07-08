@@ -1,0 +1,12 @@
+section.signIn {
+    @extend section.login;
+
+    .signInWrapper {
+        @extend .loginWrapper;
+        height: 550px;
+
+        form {
+            margin-top: 1rem;
+        }
+    }
+}

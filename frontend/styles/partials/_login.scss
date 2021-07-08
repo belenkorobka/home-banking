@@ -1,0 +1,38 @@
+section.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .loginWrapper {
+        // background-color: #f9f9f9;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 400px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow:  0px 0px 40px -7px #e8e8e8;
+        transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+        // box-shadow: -1px 1px 20px 4px rgba(0,0,0,0.1);
+
+        form {
+            margin-top: 9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // height: 20rem;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            margin-top: 5rem;
+        }
+    }
+}

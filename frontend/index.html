@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Home Banking</title>
 </head>
 <body>
-    <header>
-        <h1>Home Banking</h1>
+    <header class="headerHome">
+        <h1 class="logo">Home Banking</h1>
     </header>
-    <section>
-        
-    </section>
+    <main class="dashboard">
+        <section class="welcomeContainer">
+            <h2>Hola <span id="nameWelcome">nombre</span>!</h2>
+        </section>
+        <section class="sectionContainer">
+            <div>
+                <section class="moneyContainer">
+                    <h3>Tu dinero disponible es:</h3>
+                    <p id="money" class="money">$1000</p>
+                </section>
+                <section class="sectionData">
+                    <h3>Datos de la cuenta</h3>
+                    <div class="userName">
+                        <p>Nombre y apellido</p>
+                        <p class="boldData">Belén Korobka</p>
+                    </div>
+                    <div class="userNumber">
+                        <p>Número de cuenta</p>
+                        <p class="boldData">1234566789</p>
+                    </div>
+                    <div class="userEmail">
+                        <p>E-mail</p>
+                        <p class="boldData">belenkorobka@gmail.com</p>
+                    </div>
+                </section>
+            </div>
+            <div class="transferWrappper">
+                <section class="transferContainer">
+                    <h3>Realizar una transferencia</h3>
+                </section>
+                <section class="transferAction">
+                    <form action="">
+                        <div class="inputContainer">
+                            <label for="recipient" class="labelPlaceholder" id="labelRecipient">Cuenta de destino</label>
+                            <input type="number" name="recipient" id="recipient">
+                        </div>
+                        <div class="inputContainer">
+                            <label for="amount" class="labelPlaceholder" id="labelAmount">Monto a tranferir</label>
+                            <input type="number" name="amount" id="amount">
+                        </div>
+                        <button type="submit" class="primaryButton">Transferir</button>
+                    </form>
+                </section>      
+            </div>
+        </section>
+    </main>
+    
 </body>
 </html>

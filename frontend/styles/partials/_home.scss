@@ -1,0 +1,70 @@
+.dashboard {
+    margin: 5rem 7rem 6rem 7rem;
+
+    .welcomeContainer h2{
+        @include manrope-light(4rem);
+        color: $blueColor;
+    }
+
+    .sectionContainer {
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-between;
+
+        .money {
+            font-size: 5rem;
+        }
+
+        .sectionData {
+            margin-top: 3rem;
+
+            &>div {
+                margin: 1.5rem 0;
+            }
+        }
+
+        h3 {
+            @include manrope-regular(2rem);
+            color: $blueColor;
+        }
+
+        p {
+            @include manrope-light(1.4rem);
+            color: #808080;
+
+            &.boldData {
+                font-weight: 700;
+                color: $blueColor;
+            }
+        }
+
+        .historialExamenes {
+            width: 70%;
+        }
+
+        .transferWrappper {
+            margin-right: 10rem;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 400px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow:  0px 0px 40px -7px #e8e8e8;
+            transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                button {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}

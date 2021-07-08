@@ -1,0 +1,332 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+ul li, ol li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1.title {
+  font: 300 5rem "Manrope", sans-serif;
+  color: #4113D1;
+}
+
+p {
+  font: 300 1.5rem "Manrope", sans-serif;
+}
+
+button {
+  border: none;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button.primaryButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 19rem;
+  height: 5rem;
+  background-color: #4113D1;
+  padding: 0 2.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+button.primaryButton img {
+  position: relative;
+  left: 0;
+  width: 1.7rem;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+button.primaryButton p {
+  color: white;
+  font-size: 1.4rem;
+}
+
+button.primaryButton:hover {
+  background-color: #20154F;
+}
+
+button.primaryButton:hover img {
+  left: 7px;
+}
+
+.inputContainer {
+  position: relative;
+  margin: 1rem 0 2rem 0;
+  width: 28rem;
+}
+
+.inputContainer input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: block;
+  color: #20154F;
+  border-bottom: 1px solid #999999;
+  width: 100%;
+  padding-bottom: 0.7rem;
+  font: 800 1.5rem "Manrope", sans-serif;
+}
+
+.inputContainer input.inputActive {
+  border-bottom: 1px solid #4113D1;
+}
+
+.inputContainer label.labelPlaceholder {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  color: #999999;
+  cursor: text;
+  bottom: 10px;
+  font: 300 1.4rem "Manrope", sans-serif;
+}
+
+.inputContainer label.labelPosition {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: 30px;
+  color: #999999;
+  cursor: pointer;
+  font: 300 1.2rem "Manrope", sans-serif;
+}
+
+.inputContainer label.labelActive {
+  color: #4113D1;
+}
+
+header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 7rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  -webkit-transition: padding 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out;
+}
+
+header .logo {
+  width: 120px;
+  margin-top: 6px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  color: #4113D1;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+header.headerHome {
+  background-color: #4113D1;
+}
+
+header.headerHome h1 {
+  color: white;
+}
+
+section.login, section.signIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.login .loginWrapper, section.signIn .loginWrapper, section.signIn .signInWrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 0px 40px -7px #e8e8e8;
+          box-shadow: 0px 0px 40px -7px #e8e8e8;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1), -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+section.login .loginWrapper form, section.signIn .loginWrapper form, section.signIn .signInWrapper form {
+  margin-top: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.login .loginWrapper:hover, section.signIn .loginWrapper:hover, section.signIn .signInWrapper:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+section.login .loginWrapper button, section.signIn .loginWrapper button, section.signIn .signInWrapper button {
+  margin-top: 5rem;
+}
+
+section.signIn .signInWrapper {
+  height: 550px;
+}
+
+section.signIn .signInWrapper form {
+  margin-top: 1rem;
+}
+
+.dashboard {
+  margin: 5rem 7rem 6rem 7rem;
+}
+
+.dashboard .welcomeContainer h2 {
+  font: 300 4rem "Manrope", sans-serif;
+  color: #4113D1;
+}
+
+.dashboard .sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .sectionContainer .money {
+  font-size: 5rem;
+}
+
+.dashboard .sectionContainer .sectionData {
+  margin-top: 3rem;
+}
+
+.dashboard .sectionContainer .sectionData > div {
+  margin: 1.5rem 0;
+}
+
+.dashboard .sectionContainer h3 {
+  font: 400 2rem "Manrope", sans-serif;
+  color: #4113D1;
+}
+
+.dashboard .sectionContainer p {
+  font: 300 1.4rem "Manrope", sans-serif;
+  color: #808080;
+}
+
+.dashboard .sectionContainer p.boldData {
+  font-weight: 700;
+  color: #4113D1;
+}
+
+.dashboard .sectionContainer .historialExamenes {
+  width: 70%;
+}
+
+.dashboard .sectionContainer .transferWrappper {
+  margin-right: 10rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 0px 40px -7px #e8e8e8;
+          box-shadow: 0px 0px 40px -7px #e8e8e8;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1), -webkit-transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.dashboard .sectionContainer .transferWrappper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .sectionContainer .transferWrappper form button {
+  margin-top: 3rem;
+}
+/*# sourceMappingURL=styles.css.map */

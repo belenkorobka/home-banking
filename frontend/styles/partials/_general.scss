@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1.title {
+    @include manrope-light(5rem);
+
+    color: $blueColor;
+}
+
+p{
+    @include manrope-light(1.5rem);
+}
+
+button {
+    border: none;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+
+    &.primaryButton {
+        display: flex;
+        width: 19rem;
+        height: 5rem;
+        background-color: $blueColor;
+        padding: 0 2.5rem;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease-in-out;
+        text-align: center;
+        justify-content: center;
+        color: white;
+
+        img {
+            position: relative;
+            left: 0;
+            width: 1.7rem;
+            transition: left 0.3s ease-in-out;
+        }
+
+        p {
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            background-color: $darkBlueColor;
+
+            img {
+                left: 7px;
+            }
+        }
+    }
+}
+
+.inputContainer {
+    position: relative;
+    margin: 1rem 0 2rem 0;
+    width: 28rem;
+
+    input {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        display: block;
+        color: $darkBlueColor;
+        border-bottom: 1px solid $darkGrayColor;
+        width: 100%;
+        padding-bottom: 0.7rem;
+        @include manrope-extraBold(1.5rem);
+
+        &.inputActive {
+            border-bottom: 1px solid $blueColor;
+        }
+    }
+    
+    label {
+        &.labelPlaceholder {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            color: $darkGrayColor;
+            cursor: text;
+            bottom: 10px;
+            @include manrope-light(1.4rem);
+        }
+
+        &.labelPosition {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            bottom: 30px;
+            color: $darkGrayColor;
+            cursor: pointer;
+            @include manrope-light(1.2rem)
+        }
+
+        &.labelActive {
+            color: $blueColor;
+        }
+        
+    }
+}

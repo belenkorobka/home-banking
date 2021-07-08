@@ -1,0 +1,30 @@
+header {
+    background-color: white;
+    display: flex;
+    padding: 3rem 7rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    // position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    transition: padding 0.3s ease-in-out;
+
+    .logo {
+        width: 120px;
+        margin-top: 6px;
+        transition: width 0.3s ease-in-out;
+        color: $blueColor;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    &.headerHome {
+        background-color: $blueColor;
+
+        h1 {
+            color: white;
+        }
+    }
+}

@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Crear cuenta | Home Banking</title>
 </head>
 <body>
     <header>
-        <h1>Home Banking</h1>
+        <h1 class="logo">Home Banking</h1>
     </header>
-    <section>
+    <section class="signIn">
+        <div class="signInWrapper">
         <form>
             <div class="inputContainer">
                 <label for="name" class="labelPlaceholder" id="labelName">Nombre</label>
@@ -32,8 +38,9 @@
                 <label for="password" class="labelPlaceholder" id="labelPassword">Contraseña</label>
                 <input type="password" name="password" id="password">
             </div>
-            <button type="submit">Crear cuenta</button>
+            <button type="submit" class="primaryButton">Crear cuenta</button>
         </form>
+    </div>
     </section>
 </body>
 </html>
