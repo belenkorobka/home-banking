@@ -4,7 +4,7 @@ const userModel = require('../models/user');
 
 class User {
     static async login(req, res) {
-        const user = userModel.findOne({where: {
+        const user = await userModel.findOne({where: {
             email: req.body.email,
             password: req.body.password
         }});
