@@ -1,6 +1,6 @@
-let labelDni = document.getElementById("labelDni");
+let labelEmail = document.getElementById("labelEmail");
 let labelPassword = document.getElementById("labelPassword");
-let inputDni = document.getElementById("dni");
+let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
 let btnSubmit = document.getElementById('submit');
 
@@ -22,7 +22,7 @@ function inputListener(input, label) {
     });
 }
 
-inputListener(inputDni, labelDni);
+inputListener(inputEmail, labelEmail);
 inputListener(inputPassword, labelPassword);
 
 async function checkStatus(response) {
@@ -61,7 +61,7 @@ btnSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     request("/login", {
         method: "POST",
-        body: { dni: inputDni.value, password: inputPassword.value },
+        body: { email: inputEmail.value, password: inputPassword.value },
     }).then((res) => {
         localStorage.setItem("ejercicio_token", res.token);
         localStorage.setItem('ejercicio_admin', res.admin);
