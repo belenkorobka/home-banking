@@ -17,6 +17,9 @@ app.post('/login', UserController.login);
 //Crear usuario
 app.post('/user', UserController.create);
 
+//
+app.get('/user/me', jwtMiddleware, UserController.me);
+
 app.listen(process.env.PORT, () => {
     console.log(`Server started on port=${process.env.PORT}`);
 });

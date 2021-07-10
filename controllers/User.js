@@ -66,6 +66,27 @@ class User {
             });
         }
     }
+
+    static async me(req, res){
+        try {
+            const user = await userModel.findOne({
+                where: {id:req.user.id},
+                attributes: {
+                    exclude: ['password', 'roles_id']
+                },
+                include: ['role']
+            });
+            return res.json({
+                status: 200,
+                data: user
+            })
+        } catch (error) {
+            return res.status(500).json({
+                status: 500,
+                error
+            });
+        }
+    }
 }
 
 module.exports = User;
