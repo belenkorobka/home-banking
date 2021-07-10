@@ -63,8 +63,8 @@ btnSubmit.addEventListener("click", (e) => {
         method: "POST",
         body: { email: inputEmail.value, password: inputPassword.value },
     }).then((res) => {
-        localStorage.setItem("ejercicio_token", res.token);
-        localStorage.setItem('ejercicio_admin', res.admin);
+        localStorage.setItem("token", res.token);
+        localStorage.setItem('admin', res.admin);
         window.location.replace('/public/index.html');
     }).catch(err => {
       console.log(err);

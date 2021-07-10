@@ -17,27 +17,27 @@
     </header>
     <main class="dashboard">
         <section class="welcomeContainer">
-            <h2>Hola <span id="nameWelcome">nombre</span>!</h2>
+            <h2>Hola <span id="nameWelcome"></span>!</h2>
         </section>
         <section class="sectionContainer">
             <div>
                 <section class="moneyContainer">
                     <h3>Tu dinero disponible es:</h3>
-                    <p id="money" class="money">$1000</p>
+                    <p id="money" class="money"></p>
                 </section>
                 <section class="sectionData">
                     <h3>Datos de la cuenta</h3>
                     <div class="userName">
                         <p>Nombre y apellido</p>
-                        <p class="boldData">Belén Korobka</p>
+                        <p class="boldData" id="dataFullName"></p>
                     </div>
                     <div class="userNumber">
                         <p>Número de cuenta</p>
-                        <p class="boldData">1234566789</p>
+                        <p class="boldData" id="dataAccount"></p>
                     </div>
                     <div class="userEmail">
                         <p>E-mail</p>
-                        <p class="boldData">belenkorobka@gmail.com</p>
+                        <p class="boldData" id="dataEmail"></p>
                     </div>
                 </section>
             </div>
@@ -61,6 +61,6 @@
             </div>
         </section>
     </main>
-    
+    <script src="./js/index.js"></script>
 </body>
 </html>
