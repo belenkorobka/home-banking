@@ -4,7 +4,9 @@ const userModel = require('../models/user');
 
 class User {
     static async login(req, res) {
-        const user = await userModel.findOne({where: {
+        const user = await userModel.findOne({
+            include: ['role'],
+            where: {
             email: req.body.email,
             password: req.body.password
         }});
@@ -17,12 +19,13 @@ class User {
        const token= jwt.sign({
            user:{
                id:user.id,
-               email: user.email
+               email: user.email,
+               role: user.role.name
            }
        },process.env.JWT_SECRET);
         return res.json({
             token,
-            admin: user.admin 
+            admin: user.role.name === 'admin' 
         });
     }
 }
