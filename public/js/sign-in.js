@@ -45,12 +45,13 @@ btnSubmit.addEventListener("click", (e) => {
             lastname: lastnameInput.value,
             dni: dniInput.value,
             email: emailInput.value,
-            password: passwordInput.value
+            password: passwordInput.value,
+            role: 2
         },
     }).then((res) => {
-        localStorage.setItem("ejercicio_token", res.token);
-        localStorage.setItem('ejercicio_admin', res.admin);
-        window.location.replace('/public/login.html');
+        // localStorage.setItem("ejercicio_token", res.token);
+        // localStorage.setItem('ejercicio_admin', res.admin);
+        window.location.replace('/public/views/login.html');
     }).catch(err => {
       console.log(err);
     });

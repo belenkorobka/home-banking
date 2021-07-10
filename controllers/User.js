@@ -49,7 +49,7 @@ class User {
             const account = shortuuid.generate(dni);
             const userCreated = await userModel.create(
                 {
-                    firstname, lastname, dni, email, password, role, account,amount:0
+                    firstname, lastname, dni, email, password, roles_id: role, account,amount:0
                 },
                 { 
                     fields: ['firstname', 'lastname', 'dni', 'email', 'password', 'roles_id', 'account', 'amount'] 
